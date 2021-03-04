@@ -11,3 +11,11 @@
     background-color: lightskyblue;
     padding: 10px;
 }
+
+
+.menu:hover {
+ display: flex;
+    background-color: blue;
+  }
+  
+  
