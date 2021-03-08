@@ -1,10 +1,6 @@
 
-
-function geefRandomGetalTerug(){                    //randomGetal =
-    let randomGetal = Math.random();                //0.54654983435
-    randomGetal = randomGetel *100 + 1;             //54.654983435
-    randomGetal = Math.floor(randomGetal);          //54
-    return randomGetal;
+let geefRandomGetal = function(){
+let randomGetal = Math.floor((Math.random() * 10) + 1);
+return randomGetal;
 }
-
-console.log(geefRandomGetalTerug());                //het getal 54 wordt getoond in de console
+console.log(geefRandomGetal(1,10));
