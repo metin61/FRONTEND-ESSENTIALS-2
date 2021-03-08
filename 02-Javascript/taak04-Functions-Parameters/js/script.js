@@ -3,7 +3,7 @@ VulNummerIn = prompt("Vul een nummer een in");
 VulNummerIn2 = prompt("vul nog een nummer in");
 
 let  bereken = function () {
-  let keer= ((parseInt(VulNummerIn) * parseInt (VulNummerIn2)));
+  let keer= ((parseFloat(VulNummerIn) * parseFloat (VulNummerIn2)));
   return keer;
 }
    
