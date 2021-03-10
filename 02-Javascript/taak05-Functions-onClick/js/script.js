@@ -1,3 +1,4 @@
+
 var huidigeKleur = "white";
 
 function toonAlert(){
@@ -8,6 +9,13 @@ function maakGroen(){
     document.querySelector("body").style.backgroundColor = "Green";
 }
 
+function maakBlauw(){
+    document.querySelector("body").style.backgroundColor = "Blue";
+}
+
+function maakRood(){
+    document.querySelector("body").style.backgroundColor = "Red";
+}
 //TODO: maak 2 functies genaamd maakBlauw en maakRood
 
 
