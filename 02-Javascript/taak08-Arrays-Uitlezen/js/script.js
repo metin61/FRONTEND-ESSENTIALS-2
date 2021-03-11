@@ -48,8 +48,8 @@ if (antwoord==1){
          
 
         }else if (antwoord==3){
-            document.querySelector(".film3-ranking").style.backgroundColor = "blue";
-            document.querySelector(".film3-ranking").style.color = "white";
+            document.querySelector(".film3-naam").style.backgroundColor = "blue";
+            document.querySelector(".film3-naam").style.color = "white";
             console.log(topFilms[2]);
 
             }else if (antwoord==4){
@@ -58,33 +58,33 @@ if (antwoord==1){
                 console.log(topFilms[3]);
 
                 }else if (antwoord==5){
-                    document.querySelector(".film5-ranking").style.backgroundColor = "blue";
-                    document.querySelector(".film5-ranking").style.color = "white";
+                    document.querySelector(".film5-naam").style.backgroundColor = "blue";
+                    document.querySelector(".film5-naam").style.color = "white";
                     console.log(topFilms[4]);
 
                  }else if (antwoord==6){
-                      document.querySelector(".film6-ranking").style.backgroundColor = "blue";
-                        document.querySelector(".film6-ranking").style.color = "white";
+                      document.querySelector(".film6-naam").style.backgroundColor = "blue";
+                        document.querySelector(".film6-naam").style.color = "white";
                     console.log(topFilms[5]);
     
                     }else if (antwoord==7){
-                         document.querySelector(".film7-ranking").style.backgroundColor = "blue";
-                         document.querySelector(".film7-ranking").style.color = "white";
+                         document.querySelector(".film7-naam").style.backgroundColor = "blue";
+                         document.querySelector(".film7-naam").style.color = "white";
                         console.log(topFilms[6]);
 
                         }else if (antwoord==8){
-                             document.querySelector(".film1-ranking").style.backgroundColor = "blue";
-                            document.querySelector(".film1-ranking").style.color = "white";
+                             document.querySelector(".film8-naam").style.backgroundColor = "blue";
+                            document.querySelector(".film8-naam").style.color = "white";
                             console.log(topFilms[7]);
 
                             }else if (antwoord==9){
-                                 document.querySelector(".film1-ranking").style.backgroundColor = "blue";
-                                 document.querySelector(".film1-ranking").style.color = "white";
+                                 document.querySelector(".film9-naam").style.backgroundColor = "blue";
+                                 document.querySelector(".film9-naam").style.color = "white";
                                 console.log(topFilms[8]);
 
                                 }else if (antwoord==10){
-                                     document.querySelector(".film1-ranking").style.backgroundColor = "blue";
-                                     document.querySelector(".film1-ranking").style.color = "white";
+                                     document.querySelector(".film10-naam").style.backgroundColor = "blue";
+                                     document.querySelector(".film10-naam").style.color = "white";
                                     console.log(topFilms[9]);
                                 }
                                     else{
