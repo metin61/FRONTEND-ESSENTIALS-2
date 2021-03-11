@@ -33,3 +33,62 @@ document.querySelector(".film10-ranking").innerHTML = 10;
 document.querySelector(".film10-naam").innerHTML = topFilms[9];
 
 
+
+function kiesFavorieteFilm(){
+var antwoord = prompt("Wat is je favoriete film?");
+if (antwoord==1){
+    document.querySelector(".film1-naam").style.backgroundColor = "blue";
+    document.querySelector(".film1-naam").style.color = "white";
+    
+    console.log(topFilms[0]);
+    }else if (antwoord==2){
+        document.querySelector(".film2-naam").style.backgroundColor = "blue";
+        document.querySelector(".film2-naam").style.color = "white";
+         console.log(topFilms[1]);
+         
+
+        }else if (antwoord==3){
+            document.querySelector(".film3-ranking").style.backgroundColor = "blue";
+            document.querySelector(".film3-ranking").style.color = "white";
+            console.log(topFilms[2]);
+
+            }else if (antwoord==4){
+                document.querySelector(".film4-naam").style.backgroundColor = "blue";
+                document.querySelector(".film4-naam").style.color = "white";
+                console.log(topFilms[3]);
+
+                }else if (antwoord==5){
+                    document.querySelector(".film5-ranking").style.backgroundColor = "blue";
+                    document.querySelector(".film5-ranking").style.color = "white";
+                    console.log(topFilms[4]);
+
+                 }else if (antwoord==6){
+                      document.querySelector(".film6-ranking").style.backgroundColor = "blue";
+                        document.querySelector(".film6-ranking").style.color = "white";
+                    console.log(topFilms[5]);
+    
+                    }else if (antwoord==7){
+                         document.querySelector(".film7-ranking").style.backgroundColor = "blue";
+                         document.querySelector(".film7-ranking").style.color = "white";
+                        console.log(topFilms[6]);
+
+                        }else if (antwoord==8){
+                             document.querySelector(".film1-ranking").style.backgroundColor = "blue";
+                            document.querySelector(".film1-ranking").style.color = "white";
+                            console.log(topFilms[7]);
+
+                            }else if (antwoord==9){
+                                 document.querySelector(".film1-ranking").style.backgroundColor = "blue";
+                                 document.querySelector(".film1-ranking").style.color = "white";
+                                console.log(topFilms[8]);
+
+                                }else if (antwoord==10){
+                                     document.querySelector(".film1-ranking").style.backgroundColor = "blue";
+                                     document.querySelector(".film1-ranking").style.color = "white";
+                                    console.log(topFilms[9]);
+                                }
+                                    else{
+                                        alert("Dit nummer staat niet in de lijst, kies een nummer in de lijst.")
+                                    }
+}
+
