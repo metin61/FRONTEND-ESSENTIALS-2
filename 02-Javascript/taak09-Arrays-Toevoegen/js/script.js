@@ -21,8 +21,12 @@ for(i = 0; i < topFilms.length; i++){
 
 function kiesFilm(){
     var antwoord = prompt("Kies een nummer, welke film moet op nummer 1 staan?");
-    if (antwoord==1){
-    eigenTopFilms.push("The Godfather");
-console.log(antwoord)
+    
+    eigenTopFilms.push(topFilms[antwoord]);
+    for(i = 0; i < eigenTopFilms.length; i++){
+        document.querySelector(".eigen-film" + (i+1)).innerHTML = eigenTopFilms[i];
+
+        console.log(topFilms[antwoord])
     }
+    
 }
