@@ -1,3 +1,4 @@
+
 var huidigeKleur = "white";
 
 function toonAlert(){
