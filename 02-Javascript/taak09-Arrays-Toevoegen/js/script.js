@@ -12,12 +12,30 @@ topFilms = [
 ];
 
 eigenTopFilms = [];
+let teller = 0;
+
 
 //met deze for-loop word de ordered list gevuld met film namen
 for(i = 0; i < topFilms.length; i++){
     document.querySelector(".imdb-film" + (i+1)).innerHTML = topFilms[i];
 }
 
-function kiesFilm(){
 
+
+function kiesFilm(){    
+    if(teller<3){
+        var antwoord = prompt("Kies een nummer, welke film moet op nummer " + parseInt(teller+1) + " staan?");
+        document.querySelector(".eigen-film" + teller).innerHTML = topFilms[antwoord-1];
+        document.querySelector(".kiesfilm-button").innerHTML = "Kies film voor plek "+parseInt(teller+1);
+        teller++;
+        console.log();
+    }
+    
 }
+        
+
+ 
+ 
+           
+    
+    
