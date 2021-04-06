@@ -6,3 +6,16 @@ function rondaf(getal, aantalplekkenachterkomma){
     const x = Math.pow(10, aantalplekkenachterkomma);
     return Math.round(getal * x)/x;
 }
+
+for (let i = 0; i < arrProductPrijs.length; i++) {
+    for (let j = 0; j < arrProductKorting.length; j++) {
+        totaal = arrProductPrijs[i] * arrProductKorting[j];
+        console.log(totaal);
+        totaal += arrProductPrijs[i];
+       
+      
+    }
+    
+    
+}
+console.log(totaal);

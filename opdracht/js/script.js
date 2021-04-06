@@ -26,7 +26,17 @@ function stringNaarPosities(str){
 //Zet een array met posities om naar een string
 function positiesNaarString(arr){
     var outputString = "";
+    arr=[0,1,2];
     //TODO: opdracht 1
+    for (let i = 0; i < arr.length; i++){
+       
+                //0,1,2 meot als letters in de variable outputstring komen
+                outputString+=strAlfabet[i];
+                console.log(outputString);
+                // console.log("Letter: " + i + " = " + str[i] + " -> positie in alfabet = " + j);
+            
+        
+    }
     return outputString;
 }
 

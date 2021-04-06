@@ -39,8 +39,8 @@ var antwoord = prompt("Wat is je favoriete film?");
 if (antwoord==1){
     document.querySelector(".film1-naam").style.backgroundColor = "blue";
     document.querySelector(".film1-naam").style.color = "white";
-    
     console.log(topFilms[0]);
+    
     }else if (antwoord==2){
         document.querySelector(".film2-naam").style.backgroundColor = "blue";
         document.querySelector(".film2-naam").style.color = "white";
