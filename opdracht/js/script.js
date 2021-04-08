@@ -36,7 +36,7 @@ function positiesNaarString(arr){
         outputString += strAlfabet[item]; // wanneer outputstring gelijk is aan strAlfabet[item] gaat hij de nummer van de positie in het alfabet terug geven.
         
     }
-        return outputString; // 
+        return outputString; 
 }
 //Geeft een array terug waarbij het codeword herhaald wordt totdat de lengte overeenkomt met het te versleutelen bericht
 //Dus als het bericht STUDENT (7 letters) is en het codeword KLAS dan krijg je KLASKLA (7 letters) terug van deze functie.
@@ -50,10 +50,10 @@ function vermenigvuldigCodeword(strInput, strCodeword){
     var intMod = inputLength % codewordLength; //het aantal letters dat overblijft die nog moeten worden aangevuld
 
     //TODO: opdracht 2
-for (var i = 0; i < intDiv; i++) {
-    outputString += strCodeword;
+for (var i = 0; i < intDiv; i++) { // i waarde 0; loopt hoe vaak inputwoord in de codewoort past en geeft de codewoord zovaak weer terug.
+    outputString += strCodeword; // 
 }
-for (var i = 0; i < intMod; i++) {
+for (var i = 0; i < intMod; i++) { // intmod loopt hoeveel letters er overgebleven zijn, van hoe vaak intdiv in een woord past en kijkt hoeveel letters overblijft.
     outputString += strCodeword[i];
 }
     console.log("Codeword full: " + outputString);
