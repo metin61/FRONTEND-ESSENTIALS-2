@@ -9,10 +9,10 @@ arrCodewordPosities = [];   //array van codeword posities
 arrOutputPosities = [];     //array van output posities
 
 //Zet een string om naar een array met posities
-function stringNaarPosities(str){
+function stringNaarPosities(str){ //string omzetten naar positief(cijfers)
     outputArray = [];
-    for (let i = 0; i < str.length; i++){
-        for (let j = 0; j < strAlfabet.length; j++) {
+    for (let i = 0; i < str.length; i++){ 
+        for (let j = 0; j < strAlfabet.length; j++) { //
             if(str[i].toUpperCase() == strAlfabet[j]){
                 outputArray.push(j);
                 // console.log("Letter: " + i + " = " + str[i] + " -> positie in alfabet = " + j);
@@ -25,21 +25,19 @@ function stringNaarPosities(str){
 
 //Zet een array met posities om naar een string
 function positiesNaarString(arr){
-    var outputString = "";
-    arr=[0,1,2];
-    //TODO: opdracht 1
-    for (let i = 0; i < arr.length; i++){
-       
-                //0,1,2 meot als letters in de variable outputstring komen
-                outputString+=strAlfabet[i];
-                console.log(outputString);
-                // console.log("Letter: " + i + " = " + str[i] + " -> positie in alfabet = " + j);
-            
+   var outputString = "";   // lege array van een string, waar uitkomst in word returned
+        //TODO: opdracht 1
+    //hier ga ik posities terug zetten naar letters en ik zet dit in de variable outputstring
+    for (let i = 0; i < arr.length; i++) { // i word als waarde 0 gegeven; loop gaat door tot (arr.length), lengte van ingevulde input woord wanneer i kleiner is dan arr.lengt(input woord van gebruiker); i++= ophoging.
+        //arr 10, 18, 11
+        //i = 0
+        // arr[i] = 10
+        let item = arr[i]; // i moet niet op 0 beginnen maar op ingevulde woord in dit geval plek 10, daarom arr[i], want arr is ingevulde woord en [i] is het begin.
+        outputString += strAlfabet[item]; // wanneer outputstring gelijk is aan strAlfabet[item] gaat hij de nummer van de positie in het alfabet terug geven.
         
     }
-    return outputString;
+        return outputString; // 
 }
-
 //Geeft een array terug waarbij het codeword herhaald wordt totdat de lengte overeenkomt met het te versleutelen bericht
 //Dus als het bericht STUDENT (7 letters) is en het codeword KLAS dan krijg je KLASKLA (7 letters) terug van deze functie.
 function vermenigvuldigCodeword(strInput, strCodeword){
@@ -52,8 +50,13 @@ function vermenigvuldigCodeword(strInput, strCodeword){
     var intMod = inputLength % codewordLength; //het aantal letters dat overblijft die nog moeten worden aangevuld
 
     //TODO: opdracht 2
-
-    // console.log("Codeword full: " + outputString);
+for (var i = 0; i < intDiv; i++) {
+    outputString += strCodeword;
+}
+for (var i = 0; i < intMod; i++) {
+    outputString += strCodeword[i];
+}
+    console.log("Codeword full: " + outputString);
     return outputString;
 }
 
@@ -71,8 +74,8 @@ function versleutel(){
 
     outputArray = [];
     for (let i = 0; i < arrInputPosities.length; i++) {
-        if(arrInputPosities[i] + arrCodewordPosities[i] > 26){
-            outputArray.push((arrInputPosities[i] + arrCodewordPosities[i])-26);
+        if(arrInputPosities[i] + arrCodewordPosities[i] > 25){
+            outputArray.push((arrInputPosities[i] + arrCodewordPosities[i])-25);
         }
         else{ 
             outputArray.push(arrInputPosities[i] + arrCodewordPosities[i]);
@@ -81,11 +84,31 @@ function versleutel(){
     }
 
 
-    // console.log("versleuteld bericht: " + positiesNaarString(outputArray));
-    // document.querySelector("#output").value = positiesNaarString(outputArray);
+     console.log("versleuteld bericht: " + positiesNaarString(outputArray));
+     document.querySelector("#output").value = positiesNaarString(outputArray);
     strCodewordFull = [];
 }
 
 function ontsleutel(){
-    //TODO: opdracht 3
+    //hier vul ik alle variable met de juiste waardes, strCodeword is het woord 
+    //wat in het variable codeword staat en dan is outputstring, de variable die in de html in de output staat
+
+    strCodeword = document.querySelector("#codeword").value; 
+    outputString = document.querySelector("#output").value;
+    strCodewordFull = vermenigvuldigCodeword(outputString, strCodeword);
+    arrCodewordPosities = stringNaarPosities(strCodewordFull);
+    arroutputPosities = stringNaarPosities(outputString);
+    //console.log(strCodeword + strCodewordFull + arrCodewordPosities + arroutputPosities);
+
+    outputArray = [];
+    for (let i = 0; i < arroutputPosities.length; i++) {
+        if(arroutputPosities[i] - arrCodewordPosities[i] < 0){
+            outputArray.push((arroutputPosities[i] - arrCodewordPosities[i])+25);
+        }
+        else{ 
+            outputArray.push(arroutputPosities[i] - arrCodewordPosities[i]);
+        }
+        
+    }
+    document.querySelector("#output").value = positiesNaarString(outputArray);
 }
